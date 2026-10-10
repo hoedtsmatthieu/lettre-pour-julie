@@ -6,7 +6,8 @@ html {
 }
 
 body {
-    background-color: white;
+    /* background-color: #121212; */
+    background-image: url("bc.png");
     font-family: Georgia, serif;
     color: #514044;
     margin: 0;
