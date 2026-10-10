@@ -121,24 +121,26 @@ input[type="radio"] {
 /* Adaptation aux téléphones */
 @media (max-width: 600px) {
     body {
+        background-image: url("bc.png");
+        background-size: cover;
         padding: 15px;
     }
 
     .lettre {
-        padding: 25px 20px;
+        padding: 20px 15px;
         margin: 15px auto;
     }
 
     h1 {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     h2, h3 {
-        font-size: 21px;
+        font-size: 19px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .choix {
