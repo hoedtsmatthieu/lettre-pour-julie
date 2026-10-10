@@ -1,0 +1,150 @@
+
+/* Style général de la page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    background-color: white;
+    font-family: Georgia, serif;
+    color: #514044;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Les deux blocs : lettre et boutons */
+.lettre {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fffaf9;
+    border: 1px solid #f0dfe2;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+/* Espace entre la lettre et le bloc des boutons */
+.lettre + .lettre {
+    margin-top: 25px;
+}
+
+/* Les titres */
+h1 {
+    text-align: center;
+    color: #a45d70;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+h2, h3 {
+    color: #a45d70;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+h3 {
+    text-align: right;
+    margin-top: 30px;
+}
+
+/* Le texte */
+p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.introduction {
+    text-align: center;
+    color: #947b82;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+/* Les boutons */
+.choix {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.choix label {
+    background-color: #f3e1e5;
+    color: #874d5e;
+    padding: 12px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.choix label:hover {
+    background-color: #a45d70;
+    color: white;
+    box-shadow: 0 5px 20px #00000023;
+}
+
+/* Les boutons radio sont masqués */
+input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* On cache les messages au départ */
+.suite {
+    display: none;
+    border-top: 1px solid #ead5d9;
+    margin-top: 30px;
+    padding-top: 20px;
+    scroll-margin-top: 20px;
+}
+
+/* Affichage du message choisi */
+#choix1:checked ~ .suite.partie1 {
+    display: block;
+}
+
+#choix2:checked ~ .suite.partie2 {
+    display: block;
+}
+
+#choix3:checked ~ .suite.partie3 {
+    display: block;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    .lettre {
+        padding: 25px 20px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2, h3 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .choix {
+        flex-direction: column;
+    }
+
+    .choix label {
+        text-align: center;
+    }
+}
